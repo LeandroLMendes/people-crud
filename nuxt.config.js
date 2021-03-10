@@ -3,8 +3,8 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - medprev',
-    title: 'medprev',
+    titleTemplate: '%s - Medprev',
+    title: 'Medprev',
     htmlAttrs: {
       lang: 'en'
     },
@@ -24,6 +24,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/mask.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -44,13 +45,15 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'https://jsonbox.io/box_4fb40ddf68536b9b9ac6'
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
