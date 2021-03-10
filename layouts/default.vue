@@ -75,7 +75,6 @@
       top
       right
       :timeout="6000"
-      auto-height
     >
       {{ snackbar.text }}
       <template #action="{ attrs }">
